@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  exos-node:
+    network_mode: host
+    image: fluidchains/blockcore-node
+    # image: blockcore-node
+    container_name: exos-node
+    command: --chain=EXOS
+    volumes:
+      - ~/blockcore-volumes:/root/.blockcore

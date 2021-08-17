@@ -4,7 +4,7 @@ services:
     network_mode: host
     image: fluidchains/blockcore-node
     container_name: exos-node
-    command: --chain=EXOS -apiuri=http://0.0.0.0
+    command: --chain=EXOS -apiuri=http://0.0.0.0 -txindex=1
     volumes:
       - ~/blockcore-volumes:/root/.blockcore
 
@@ -12,6 +12,6 @@ services:
     network_mode: host
     image: fluidchains/blockcore-node
     container_name: rutanio-node
-    command: --chain=RUTA -apiuri=http://0.0.0.0
+    command: --chain=RUTA -apiuri=http://0.0.0.0 -txindex=1
     volumes:
       - ~/blockcore-volumes:/root/.blockcore
